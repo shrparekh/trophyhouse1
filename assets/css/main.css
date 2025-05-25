@@ -2891,7 +2891,7 @@ img {
 .mean-container .mean-nav ul li a {
   width: 100%;
   padding: 10px 0;
-  color: var(--white) !important;
+  color: black !important;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 600;
@@ -6443,7 +6443,7 @@ input.main-search-input::placeholder {
   position: relative;
   height: 133vh;
   padding: 30px 30px;
-  background-color: var(--title);
+  background-color: white;
 }
 .offcanvas__wrapper .offcanvas__content .text {
   color: var(--white);
@@ -6477,7 +6477,7 @@ input.main-search-input::placeholder {
   text-transform: capitalize;
 }
 .offcanvas__wrapper .offcanvas__content .offcanvas__contact ul li a {
-  color: var(--white);
+  color: black;
 }
 .offcanvas__wrapper .offcanvas__content .offcanvas__contact ul li:not(:last-child) {
   margin-bottom: 15px;
@@ -8640,9 +8640,9 @@ textarea.is-invalid {
 .best-seller-product-items-two {
   padding: 30px;
   border-radius: 20px;
-  background-color: #f3e5cd96;
+  background-color: white;
   position: relative;
-  border: 3px solid brown;
+  border: 3px solid black;
   transition: all 0.4s ease-in-out;
 }
 .best-seller-product-items-two .icon-box2 {
