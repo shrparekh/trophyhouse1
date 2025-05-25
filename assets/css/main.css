@@ -17744,3 +17744,41 @@ button {
   height: 400px;
   width: 400px;
 }
+.thank-you {
+  padding: 40px 0px;
+}
+.thank-you h1{
+  padding-bottom: 15px;
+  font-size: 3rem;
+}
+.thank-you p{
+  color: #000;
+  line-height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.thank-you .text-phone{
+  color: var(--theme);
+  font-size: 18px;
+  padding-left: 5px;
+}
+.thank-you .text-phone:hover{
+color: var(--orange3);
+}
+.thank-you img{
+  width: 17%;
+}
+
+.pop-effect {
+            animation: pop 1s ease-in-out infinite alternate;
+        }
+        @keyframes pop {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.9;
+            }
+            100% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
