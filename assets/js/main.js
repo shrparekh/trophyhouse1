@@ -365,6 +365,10 @@ JS TABLE OF CONTENTS
             spaceBetween: 30,
             speed: 3000,
             loop: true,
+             autoplay: {
+               delay: 1000,
+               disableOnInteraction: false,
+            },
             breakpoints: {
                1199: {
                   slidesPerView: 4,

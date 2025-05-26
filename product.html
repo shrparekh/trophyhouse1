@@ -716,84 +716,65 @@
 
   
   <!-- Product Gallery Section start  -->
-    <section class="product-gallery-section section-padding4 pb-5 fix">
-        <div class="container">
-            <div class="row g-4">
-               <div class="col-lg-4">
-                    <div class="product-gallery-items-four style-1">
-                        <div class="product-gallery-items-four__thumb">
-                            <img src="assets/images/TROPHYYYYYYYYYYY/e4.png" alt="thumb">
-                        </div>
-                        <div class="product-gallery-items-four__content">
-                            <h2>Flawless Finish Powder</h2>
-                            <a href="shop-left-sidebar.html">Explore More
-                            </a>
-                        </div>
+   <section class="product-gallery-section section-padding3  fix">
+    <div class="container">
+        <!-- Buttons for filtering content -->
+        <div class="filter-buttons text-center mb-4">
+            <button class="theme-btn active" onclick="filterContent('trophy', this)">Trophy</button>
+            <button class="theme-btn" onclick="filterContent('part', this)">Part</button>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Trophy Items -->
+            <div class="col-lg-4 trophy">
+                <div class="product-gallery-items-four style-1">
+                    <div class="product-gallery-items-four__thumb">
+                        <img src="assets/images/TROPHYYYYYYYYYYY/e4.png" alt="Trophy">
                     </div>
-               </div>
-               <div class="col-lg-4">
-                    <div class="product-gallery-items-four style-1">
-                        <div class="product-gallery-items-four__thumb">
-                            <img src="assets/images/TROPHYYYYYYYYYYY/e1.png" alt="thumb">
-                        </div>
-                        <div class="product-gallery-items-four__content">
-                            <h2>Flawless Finish Powder</h2>
-                            <a href="shop-left-sidebar.html">Explore More
-                            </a>
-                        </div>
+                    <div class="product-gallery-items-four__content">
+                        <h2>Flawless Finish Powder</h2>
+                        <a href="shop-left-sidebar.html">Explore More</a>
                     </div>
-               </div>
-               <div class="col-lg-4">
-                    <div class="product-gallery-items-four style-1">
-                        <div class="product-gallery-items-four__thumb">
-                            <img src="assets/images/TROPHYYYYYYYYYYY/e2.png" alt="thumb">
-                        </div>
-                        <div class="product-gallery-items-four__content">
-                            <h2>Flawless Finish Powder</h2>
-                            <a href="shop-left-sidebar.html">Explore More
-                            </a>
-                        </div>
+                </div>
+            </div>
+            <div class="col-lg-4 trophy">
+                <div class="product-gallery-items-four style-1">
+                    <div class="product-gallery-items-four__thumb">
+                        <img src="assets/images/TROPHYYYYYYYYYYY/e1.png" alt="Trophy">
                     </div>
-               </div>
-               <div class="col-lg-4">
-                    <div class="product-gallery-items-four style-1">
-                        <div class="product-gallery-items-four__thumb">
-                            <img src="assets/images/TROPHYYYYYYYYYYY/e3.png" alt="thumb">
-                        </div>
-                        <div class="product-gallery-items-four__content">
-                            <h2>Flawless Finish Powder</h2>
-                            <a href="shop-left-sidebar.html">Explore More
-                            </a>
-                        </div>
+                    <div class="product-gallery-items-four__content">
+                        <h2>Flawless Finish Powder</h2>
+                        <a href="shop-left-sidebar.html">Explore More</a>
                     </div>
-               </div>
-               <div class="col-lg-4">
-                    <div class="product-gallery-items-four style-1">
-                        <div class="product-gallery-items-four__thumb">
-                            <img src="assets/images/TROPHYYYYYYYYYYY/e3.png" alt="thumb">
-                        </div>
-                        <div class="product-gallery-items-four__content">
-                            <h2>Flawless Finish Powder</h2>
-                           <a href="shop-left-sidebar.html">Explore More
-                            </a>
-                        </div>
+                </div>
+            </div>
+            
+            <!-- Part Items -->
+            <div class="col-lg-4 part">
+                <div class="product-gallery-items-four style-1">
+                    <div class="product-gallery-items-four__thumb">
+                        <img src="assets/images/TROPHYYYYYYYYYYY/e2.png" alt="Part">
                     </div>
-               </div>
-               <div class="col-lg-4">
-                    <div class="product-gallery-items-four style-1">
-                        <div class="product-gallery-items-four__thumb">
-                            <img src="assets/images/TROPHYYYYYYYYYYY/e3.png" alt="thumb">
-                        </div>
-                        <div class="product-gallery-items-four__content">
-                            <h2>Flawless Finish Powder</h2>
-                           <a href="shop-left-sidebar.html">Explore More
-                            </a>
-                        </div>
+                    <div class="product-gallery-items-four__content">
+                        <h2>Flawless Finish Powder</h2>
+                        <a href="shop-left-sidebar.html">Explore More</a>
                     </div>
-               </div>
+                </div>
+            </div>
+            <div class="col-lg-4 part">
+                <div class="product-gallery-items-four style-1">
+                    <div class="product-gallery-items-four__thumb">
+                        <img src="assets/images/TROPHYYYYYYYYYYY/e3.png" alt="Part">
+                    </div>
+                    <div class="product-gallery-items-four__content">
+                        <h2>Flawless Finish Powder</h2>
+                        <a href="shop-left-sidebar.html">Explore More</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
@@ -1208,6 +1189,25 @@
             </div>
          </div>
       </div> -->
+      <script>
+    function filterContent(category, button) {
+        // Hide/Show items based on category
+        const allItems = document.querySelectorAll('.product-gallery-section .row > div');
+        allItems.forEach(item => {
+            if (item.classList.contains(category)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        // Update active button
+        const allButtons = document.querySelectorAll('.filter-buttons .theme-btn');
+        allButtons.forEach(btn => btn.classList.remove('active')); // Remove 'active' class from all buttons
+        button.classList.add('active'); // Add 'active' class to clicked button
+    }
+</script>
+
 
       <!--<< All JS Plugins >>-->
       <script src="assets/js/jquery-3.7.1.min.js"></script>

@@ -146,6 +146,7 @@ a:hover {
 p {
   margin: 0px;
   transition: all 0.4s ease-in-out;
+
 }
 
 span {
@@ -4844,7 +4845,7 @@ input.main-search-input::placeholder {
     margin-inline-end: 10px;
   }
   .header-1 .mega-menu-wrapper .header-main .main-menu ul li a {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .header-1 .header-right .header-button {
@@ -8152,9 +8153,25 @@ textarea.is-invalid {
   align-items: center;
   gap: 20px;
 }
+.branch-name {
+    display: inline-block; /* To ensure the underline is specific to the text width */
+    position: relative;
+    font-size: 1.5rem; /* Adjust as needed */
+}
+
+.branch-name::after {
+    content: "";
+    position: absolute;
+    left:0px; /* Center the underline horizontally */
+    bottom: -5px; /* Space between the text and underline, adjust as needed */
+    width: 70%; /* 50% of the element's width */
+    height: 3px; /* Thickness of the underline */
+    background-color: var(--orange3); /* Adjust color to match your theme */
+}
+
 .testimonial-card-items-one .client-info .client-img {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   position: relative;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -8174,6 +8191,7 @@ textarea.is-invalid {
   -ms-transition: all 0.1s;
   -o-transition: all 0.1s;
 }
+
 .testimonial-card-items-one .client-info .content h3 {
   color: #121315;
   font-family: "Inter", sans-serif;
@@ -8189,8 +8207,12 @@ textarea.is-invalid {
   }
 }
 .testimonial-card-items-one p {
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 30px;
+  margin-top: 10px;
+}
+.testimonial-card-items-one p strong{
+  color: var(--theme);
 }
 .testimonial-card-items-one .star {
   color: var(--theme3);
@@ -17782,3 +17804,82 @@ color: var(--orange3);
                 opacity: 1;
             }
         }
+        .filter-buttons .theme-btn{
+          font-size: 19px !important;
+          padding: 18px 25px;
+        }
+        .filter-buttons .theme-btn.active {
+        background-color: #007bff; /* Adjust this to your theme's active background color */
+        color: #fff; /* Adjust text color */
+        border-color: #0056b3; /* Optional: border color for active button */
+    }
+    .media-wrapper {
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff5f4;
+
+}
+
+.media-content {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.d-none {
+    display: none;
+}
+
+.media-nav {
+  position: relative;
+    top:-25px;
+}
+
+.theme-btn {
+    background-color: var(--theme5); /* Replace with your theme color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    
+}
+
+.theme-btn i {
+    font-size: 16px;
+}
+
+.theme-btn:hover {
+    background-color: #0056b3; /* Darker hover color */
+}
+.thumbnail-box {
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--orange2);
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    padding: 4px;
+}
+
+.thumbnail-box:hover {
+    border-color: var(--theme);
+}
+.thumbnail-box.active {
+    border-color: var(--theme); /* Active border color */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect */
+}
+.thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
